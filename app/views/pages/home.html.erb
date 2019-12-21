@@ -1,0 +1,27 @@
+<h1>Bitcoin Price</h1>
+
+<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+  <li class="nav-item" style="border-top: 3px solid #fd1015">
+    <a class="nav-link active" id="pending-tab" data-toggle="tab" href="#compra" role="tab" aria-controls="Pendientes" aria-selected="true">Compra</a>
+  </li>
+  <li class="nav-item" style="border-top: 3px solid #eeff00">
+    <a class="nav-link" id="on_transit-tab" data-toggle="tab" href="#on_transit" role="tab" aria-controls="Entregando" aria-selected="false">Venta</a>
+  </li>
+</ul>
+
+<div class="container d-flex text-center">
+  <div class="col-lg-4">
+    <h2>Bitstamp:</h2>
+    <p><%= @bitstamp_price%></p>
+  </div>
+
+  <div class="col-lg-4">
+    <h2>Bitfinex:</h2>
+    <p><%= @bitfinex_price%></p>
+  </div>
+
+  <div class="col-lg-4">
+    <h2>Coinbase:</h2>
+    <p><%= @coinbase_price%></p>
+  </div>
+</div>
