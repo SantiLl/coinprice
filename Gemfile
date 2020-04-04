@@ -37,6 +37,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Added gems
 gem 'actionview', '>= 5.2.4.2'
 gem 'nokogiri', '>= 1.10.8'
+gem 'ferrum', '>= 0.7'
 
 
 
