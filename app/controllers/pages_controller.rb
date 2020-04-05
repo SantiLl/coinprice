@@ -11,6 +11,12 @@ class PagesController < ApplicationController
 
     coinbase = JSON.parse(open('https://api.coinbase.com/v2/prices/spot?currency=USD').string)
     @coinbase_price = coinbase["data"]["amount"]
+
+    browser = Ferrum::Browser.new
+    browser.goto('https://www.satoshitango.com/es-AR/precio-del-bitcoin-en-argentina.html')
+    sleep(3)
+    satoshitango = Nokogiri::HTML.parse(browser.body)
+    @satoshitango_price = satoshitango.at_css("[class='quote mb-3 d-inline-block']").text
   end
 
   def about
